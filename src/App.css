@@ -1,38 +1,226 @@
-.App {
+/* General Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+/* Logistics Container */
+.logistics-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9fafb;
+}
+
+.logistics-header {
   text-align: center;
+  color: #1e3a8a;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.back-button:hover {
+  background-color: #1d4ed8;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Order Card */
+.order-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.order-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #374151;
+}
+
+.order-header p {
+  color: #6b7280;
+}
+
+/* Order Products */
+.order-products {
+  margin-bottom: 20px;
+}
+
+.order-products h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.order-products ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.order-products li {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+  border-top: 2px solid #d1d5db;
+}
+
+.timeline-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  position: relative;
+  flex: 1;
+}
+
+.timeline-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline-icon.blue {
+  background-color: #2563eb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timeline-icon.orange {
+  background-color: #f97316;
+}
+
+.timeline-icon.yellow {
+  background-color: #eab308;
+}
+
+.timeline-icon.purple {
+  background-color: #a855f7;
+}
+
+.timeline-icon.green {
+  background-color: #22c55e;
+}
+
+.timeline-content h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Status Buttons */
+.status-buttons {
+  margin-top: 10px;
+}
+
+.status-buttons button {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.status-buttons button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Recipient Form */
+.recipient-form {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipient-form h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.recipient-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #374151;
+}
+
+.recipient-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.recipient-form button {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.recipient-form button:hover {
+  background-color: #1d4ed8;
 }
