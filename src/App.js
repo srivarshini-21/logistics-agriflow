@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaBox, FaShippingFast, FaCheckCircle, FaClipboardList } from 'react-icons/fa';
 import './App.css';
+import AgriChatbot from './Chatbot';
 
 function App() {
     const [orders, setOrders] = useState([
@@ -205,6 +206,8 @@ function App() {
                     </div>
                 ))}
             </div>
+
+            <AgriChatbot />
         </div>
     );
 }
